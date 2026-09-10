@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Database/printers.json
