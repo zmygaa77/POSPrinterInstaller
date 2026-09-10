@@ -1,0 +1,26 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+
+# Drivers/ дэх бэлэн driver файлууд (эх сурвалж дотор ихэвчлэн том, эрхийн
+# асуудалтай vendor файлууд байдаг тул repo-д оруулахгүй байхыг зөвлөж
+# байна — оронд нь GitHub Releases / өөр static hosting-т zip-дэж
+# байршуулаад printers.json дэх "driverDownloadUrl"-аар холбоно).
+# Хэрэв та ЭДГЭЭРИЙГ ч мөн repo-д хадгалахыг хүсвэл доорх мөрийг устгана уу.
+Drivers/
+
+# Logs
+Logs/
+*.log
+
+# NuGet
+packages/
+*.nupkg
+
+# Windows
+Thumbs.db

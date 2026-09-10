@@ -1,0 +1,230 @@
+[
+  {
+    "vid": "0483",
+    "pid": "070B",
+    "manufacturer": "XPrinter",
+    "modelName": "XP-58 (POSPrinter POS-58)",
+    "windowsPrinterName": "POSPrinter POS-58",
+    "installMethod": "inf",
+    "infPath": "XPrinter\\XP-58\\posprtv6.inf",
+    "setAsDefault": false,
+    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно."
+  },
+  {
+    "vid": "0456",
+    "pid": "0808",
+    "manufacturer": "POS-58-Series",
+    "modelName": "POS-58-Series",
+    "windowsPrinterName": "POS-58-Series",
+    "driverInstallerPath": "XPrinter\\H-58\\POS-58-Setup.exe",
+    "installArguments": "",
+    "supportsSilentInstall": false,
+    "autoDriveWizard": true,
+    "wizardWindowTitle": "POS-58-Series Printer Driver installation",
+
+    "wizardSteps": [
+      {
+        "windowTitle": "Select Language",
+        "actions": [
+          {
+            "type": "setCombo",
+            "value": "English",
+            "timeoutMs": 3000,
+            "waitAfterMs": 400
+          },
+          {
+            "type": "clickButton",
+            "target": "OK",
+            "timeoutMs": 3000,
+            "waitAfterMs": 500
+          }
+        ]
+      },
+      {
+        "windowTitle": "POS-58-Series Printer Driver installation",
+        "actions": [
+          {
+
+            "type": "clickButton",
+            "target": "Next",
+            "timeoutMs": 4000,
+            "waitAfterMs": 400,
+            "stopAfter": true
+          }
+        ]
+      },
+      {
+        "windowTitle": "POS-58-Series Printer Driver installation",
+        "actions": [
+          {
+
+            "type": "clickButton",
+            "target": "Back",
+            "timeoutMs": 4000,
+            "waitAfterMs": 400,
+            "stopAfter": true
+          }
+        ]
+      },
+      {
+        "windowTitle": "POS-58-Series Printer Driver installation",
+        "requireControlText": "I have read and accept the license terms",
+        "requireControlType": "RadioButton",
+        "actions": [
+          {
+            "type": "selectRadio",
+            "target": "I have read and accept the license terms",
+            "timeoutMs": 3000,
+            "waitAfterMs": 500,
+            "continueOnFailure": false
+          },
+          {
+            "type": "clickButton",
+            "target": "Next",
+            "timeoutMs": 4000,
+            "waitAfterMs": 400
+          }
+        ]
+      },
+
+      {
+        "windowTitle": "POS-58-Series Printer Driver installation",
+        "requireControlText": "Install",
+        "requireControlType": "Button",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Install",
+            "timeoutMs": 3000,
+            "waitAfterMs": 500
+          }
+        ]
+      },
+
+      {
+        "windowTitle": "POS-58-Series Printer Driver installation",
+        "requireControlText": "Finish",
+        "requireControlType": "Button",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Finish",
+            "timeoutMs": 3000,
+            "waitAfterMs": 300
+          }
+        ],
+        "stopAfter": true
+      },
+
+      {
+        "windowTitle": "POS-58-Series Printer Driver installation",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Next",
+            "timeoutMs": 2000,
+            "waitAfterMs": 400
+          }
+        ]
+      }
+    ],
+
+    "setAsDefault": false,
+    "notes": "installMethod ТАЛБАРААР суулгах аргыг сольж болно: \"inf\" гэвэл infPath дэх .inf-ийг pnputil-ээр (гуравдагч талын exe-г ОГТ АЖИЛЛУУЛАХГҮЙ, гар хүрэлтгүй) суулгана; \"exe\" гэвэл driverInstallerPath дэх суулгагчийг (autoDriveWizard=true бол WizardAutomationService-ээр wizardSteps-ийн дагуу автоматаар удирдана) ажиллуулна. Хоёр аргын тохиргоо аль аль нь энэ ганц бичлэгт хадгалагдсан тул зөвхөн installMethod утгыг өөрчилснөөр л апп аль аргыг ашиглахаа шийднэ, бичлэг хуулбарлах/дараалал солих шаардлагагүй. INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр бүх файл одоо багц дотор бэлэн байгаа тул exe-ээр ажиллуулахад гар хүрэлтгүйгээр шууд INF аргаар суулгана."
+  },
+  {
+    "vid": "0483",
+    "pid": "5720",
+    "manufacturer": "SPRT",
+    "modelName": "SPRT-POS58",
+    "windowsPrinterName": "Spirit SPRT Printer",
+    "driverModelName": "58mm Series Printer",
+    "installMethod": "inf",
+    "infPath": "SPRT\\SPRT_POS58\\pos58en.inf",
+    "setAsDefault": false,
+    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой."
+  },
+  {
+    "vid": "1FC9",
+    "pid": "2016",
+    "manufacturer": "XPrinter",
+    "modelName": "XP-80 (Printer POS-80)",
+    "windowsPrinterName": "POSPrinter POS-80",
+    "driverModelName": "POSPrinter POS-80",
+    "installMethod": "inf",
+    "infPath": "XPrinter\\PLUS-A1\\posprtv6.inf",
+    "setAsDefault": false,
+    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно."
+  },
+  {
+    "vid": "0483",
+    "pid": "5720",
+    "manufacturer": "SPRT",
+    "modelName": "SPRT-POS80",
+    "windowsPrinterName": "Spirit SPRT Printer",
+    "driverModelName": "80mm Series Printer",
+    "installMethod": "inf",
+    "infPath": "SPRT\\SPRT-POS80\\pos88en.inf",
+    "setAsDefault": false,
+    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой."
+  },
+  {
+    "vid": "0525",
+    "pid": "A700",
+    "manufacturer": "Sewoo",
+    "modelName": "Sewoo",
+    "windowsPrinterName": "Generic POS Printer",
+    "driverModelName": "THERMAL Receipt Printer",
+    "installMethod": "inf",
+    "infPath": "Sewoo\\Sewoo-400\\SLK-Txxx.inf",
+    "setAsDefault": true,
+    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой."
+  },
+  {
+    "vid": "1FC9",
+    "pid": "2016",
+    "manufacturer": "4BARCODE",
+    "modelName": "4BARCODE 3B-T371U (Шошго хэвлэгч)",
+    "windowsPrinterName": "4BARCODE 3B-T371U",
+    "printerType": "label",
+    "productNameContains": "4BARCODE",
+    "installMethod": "exe",
+    "driverInstallerPath": "PLUS-L35\\DriverWizard.exe",
+    "installArguments": "install /model:\"4BARCODE 3B-T371U\" /name:\"4BARCODE 3B-T371U\" /port:\"{DETECTED_PORT}\"",
+    "usbPrintHardwareIdPrefix": "USBPRINT\\4BARCODE3B-T371U",
+    "supportsSilentInstall": true,
+    "setAsDefault": false,
+    "labelWidthMm": 40,
+    "labelHeightMm": 30,
+    "labelGapMm": 2,
+    "notes": "Seagull DriverWizard.exe CLI, {DETECTED_PORT}-г WMI-ээр динамикаар олдог"
+  },
+  {
+    "vid": "0525",
+    "pid": "A701",
+    "manufacturer": "Sewoo",
+    "modelName": "Sewoo-B30 (Шошго хэвлэгч)",
+    "windowsPrinterName": "SEWOO TECH LK-B30II",
+    "printerType": "label",
+    "installMethod": "inf",
+    "infPath": "Sewoo\\Sewoo-B30\\x64\\SWLabel.inf",
+    "driverModelName": "SEWOO Label Printer",
+    "setAsDefault": false,
+    "labelWidthMm": 40,
+    "labelHeightMm": 30,
+    "labelGapMm": 2,
+    "notes": "pnputil-ээр INF аргаар суулгасан"
+  },
+  {
+    "vid": "0000",
+    "pid": "0000",
+    "manufacturer": "Godex",
+    "modelName": "Godex Printer",
+    "windowsPrinterName": "Godex Printer",
+    "driverInstallerPath": "Godex\\driver.exe",
+    "installArguments": "/S",
+    "supportsSilentInstall": true,
+    "setAsDefault": false,
+    "notes": "VID/PID болон driver.exe-г та өөрөө оруулна."
+  }
+]

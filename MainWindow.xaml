@@ -1,0 +1,153 @@
+<Window x:Class="POSPrinterInstaller.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="POS Хэвлэгч суулгагч"
+        Height="660" Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Толгой хэсэг: лого зүүн дээд буланд, баруун талд нь гарчиг -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,15" LastChildFill="True">
+            <Image Source="Resources/logo.png"
+                   DockPanel.Dock="Left"
+                   Width="130"
+                   Stretch="Uniform"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="0,0,12,0"/>
+            <TextBlock Text="Хэвлэгч суулгагч"
+                       FontSize="20" FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       TextWrapping="Wrap"/>
+        </DockPanel>
+
+        <!-- Холболтын төрөл: USB эсвэл Сүлжээ (IP) -->
+        <TabControl x:Name="ConnectionTabControl" Grid.Row="1" Margin="0,0,0,15"
+                    SelectionChanged="ConnectionTabControl_SelectionChanged">
+
+            <!-- ===================== USB ===================== -->
+            <TabItem Header="USB">
+                <StackPanel Margin="0,12,0,6">
+                    <TextBlock Text="Холбогдсон хэвлэгч:" FontSize="14" Margin="0,0,0,5"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox x:Name="PrintersComboBox" Grid.Column="0"
+                                  Height="34" FontSize="14" VerticalContentAlignment="Center"
+                                  DisplayMemberPath="DisplayName"
+                                  SelectionChanged="PrintersComboBox_SelectionChanged"/>
+                        <Button x:Name="RescanButton" Grid.Column="1" Content="Шалгах"
+                                Margin="8,0,0,0" Click="RescanButton_Click"/>
+                    </Grid>
+                </StackPanel>
+            </TabItem>
+
+            <!-- ================= Сүлжээ (IP) =================
+                 ТҮР ТҮДГЭЛЗҮҮЛСЭН: Visibility="Collapsed" тул энэ таб дэлгэцэнд
+                 огт харагдахгүй (TabControl-д header нь ч гарахгүй). Дахин
+                 харуулахдаа зөвхөн доорх Visibility="Collapsed" мөрийг устгана
+                 уу — доторх бүх код/логик хэвээр хадгалагдсан байгаа. -->
+            <TabItem x:Name="NetworkIpTabItem" Header="Сүлжээ (IP)" Visibility="Collapsed">
+                <StackPanel Margin="0,12,0,6">
+                    <TextBlock Text="Хэвлэгчийн загвар:" FontSize="14" Margin="0,0,0,5"/>
+                    <ComboBox x:Name="NetworkModelComboBox" Height="34" FontSize="14"
+                              VerticalContentAlignment="Center"
+                              DisplayMemberPath="ModelName"
+                              SelectionChanged="NetworkModelComboBox_SelectionChanged"/>
+
+                    <TextBlock Text="IP хаяг:" FontSize="14" Margin="0,12,0,5"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox x:Name="IpAddressTextBox" Grid.Column="0"
+                                 Height="34" FontSize="14" VerticalContentAlignment="Center"
+                                 ToolTip="жишээ нь 192.168.1.100"
+                                 TextChanged="IpAddressTextBox_TextChanged"/>
+                        <Button x:Name="ScanNetworkButton" Grid.Column="1" Content="Сүлжээ хайх"
+                                Margin="8,0,0,0" Click="ScanNetworkButton_Click"/>
+                    </Grid>
+
+                    <ListBox x:Name="NetworkResultsListBox" Height="90" Margin="0,8,0,0"
+                             Visibility="Collapsed"
+                             DisplayMemberPath="DisplayName"
+                             SelectionChanged="NetworkResultsListBox_SelectionChanged"/>
+
+                    <!-- Хэвлэгч compьютертой ӨӨР subnet-т байгаа үед л харагдана -->
+                    <Border x:Name="DifferentSubnetPanel" Visibility="Collapsed"
+                            Background="#FFF8E1" BorderBrush="#FFB300" BorderThickness="1"
+                            CornerRadius="4" Padding="10" Margin="0,10,0,0">
+                        <StackPanel>
+                            <TextBlock Text="⚠ Энэ хэвлэгч танай компьютертой өөр сүлжээнд байна"
+                                       FontWeight="Bold" TextWrapping="Wrap" Margin="0,0,0,6"/>
+                            <TextBlock TextWrapping="Wrap" FontSize="13" Margin="0,0,0,10">
+                                Хэвлэгчийг LAN кабелиар notebook-руугаа шууд холбосон эсэхээ шалгаад
+                                доорх товчийг дарна уу. Дараах үйлдлүүд АВТОМАТААР дараалан хийгдэнэ:
+                                notebook-ийн одоогийн IP хадгалагдана → notebook-ийн IP хэвлэгчтэй
+                                ижил сүлжээ рүү түр шилжинэ → хэвлэгчийн веб тохиргооны хуудаснаас
+                                IP талбарыг олж, ХАДГАЛСАН notebook IP-гээр бөглөж "Send" илгээгдэнэ
+                                (өөрөөр хэлбэл хэвлэгч notebook-ийн хуучин IP-г өөрөө авна) → эцэст нь
+                                notebook-ийн IP автоматаар "Auto" (DHCP) болно.
+                            </TextBlock>
+                            <TextBlock TextWrapping="Wrap" FontSize="12" Foreground="#8A6D00" Margin="0,0,0,10">
+                                ⚠ Анхаар: Notebook-ийн хуучин IP-г хэвлэгч авах тул router-ийн DHCP тэр
+                                хаягийг дараа дахин өгвөл IP давхцах эрсдэлтэй (ховор тохиолддог ч
+                                боломжтой). Хэрэв ийм зөрчил гарвал хэвлэгчийн IP-г дараа дахин өөрчилж
+                                болно.
+                            </TextBlock>
+                            <!-- ТҮР ТҮДГЭЛЗҮҮЛСЭН: IsEnabled="False" болгосон. Дахин
+                                 идэвхжүүлэхдээ энэ мөрийг устгана уу. Код/логик хэвээр байгаа. -->
+                            <Button x:Name="AutoUpdatePrinterIpButton" Content="Хэвлэгчийн IP автоматаар шинэчлэх"
+                                    Background="#1976D2" Foreground="White" HorizontalAlignment="Left"
+                                    IsEnabled="False"
+                                    Click="AutoUpdatePrinterIpButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Төлөв -->
+        <TextBlock Grid.Row="2" Text="Төлөв:" FontSize="14" Margin="0,0,0,5"/>
+        <Border Grid.Row="3" Background="#F2F2F2" CornerRadius="4" Padding="10" Margin="0,0,0,15">
+            <TextBlock x:Name="StatusTextBlock" Text="Хүлээж байна..." FontSize="14" TextWrapping="Wrap"/>
+        </Border>
+
+        <!-- Суулгах товч -->
+        <Button x:Name="InstallButton" Grid.Row="4"
+                Content="СУУЛГАХ" FontWeight="Bold" FontSize="16"
+                Background="#2E7D32" Foreground="White"
+                HorizontalAlignment="Stretch" Margin="0,0,0,15"
+                Click="InstallButton_Click"/>
+
+        <!-- Явцын жагсаалт -->
+        <Border Grid.Row="5" BorderBrush="#DDDDDD" BorderThickness="1" CornerRadius="4" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Суулгах явц:" FontWeight="Bold" Margin="0,0,0,8"/>
+                <ListBox x:Name="ProgressListBox" BorderThickness="0" Background="Transparent"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto" MaxHeight="230"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyName>POSPrinterInstaller</AssemblyName>
+		<RootNamespace>POSPrinterInstaller</RootNamespace>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<Platforms>x64</Platforms>
+		<LangVersion>latest</LangVersion>
+
+		<!-- ГАНЦ ЖИЖИГ .exe ГАРГАХ ТОХИРГОО:
+         SelfContained=false -> зорилтот компьютер дээр .NET 8 Desktop
+           Runtime суусан байхыг шаардана, гэхдээ exe хэдхэн MB болно.
+           Хэрэв POS компьютерууд дээр .NET Runtime баталгаагүй бол
+           SelfContained=true болго (тэгвэл ~60-100MB болно, гэхдээ
+           runtime суулгах шаардлагагүй болно).
+         PublishSingleFile=true -> бүх DLL-үүдийг нэг .exe рүү нэгтгэнэ. -->
+		<SelfContained>false</SelfContained>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<PublishSingleFile>true</PublishSingleFile>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- USB болон принтерийн мэдээллийг WMI-ээр унших сан -->
+		<PackageReference Include="System.Management" Version="8.0.0" />
+		<PackageReference Include="System.Drawing.Common" Version="8.0.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Компанийн лого зураг (Resources/logo.png) -->
+		<Resource Include="Resources\logo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Build хийхэд Database, Drivers фолдерүүд output руу хуулагдана -->
+		<None Update="Database\printers.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Include="Drivers\**\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
