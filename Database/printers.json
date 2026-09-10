@@ -8,7 +8,9 @@
     "installMethod": "inf",
     "infPath": "XPrinter\\XP-58\\posprtv6.inf",
     "setAsDefault": false,
-    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно."
+    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/XPrinter.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "0456",
@@ -21,7 +23,6 @@
     "supportsSilentInstall": false,
     "autoDriveWizard": true,
     "wizardWindowTitle": "POS-58-Series Printer Driver installation",
-
     "wizardSteps": [
       {
         "windowTitle": "Select Language",
@@ -44,7 +45,6 @@
         "windowTitle": "POS-58-Series Printer Driver installation",
         "actions": [
           {
-
             "type": "clickButton",
             "target": "Next",
             "timeoutMs": 4000,
@@ -57,7 +57,6 @@
         "windowTitle": "POS-58-Series Printer Driver installation",
         "actions": [
           {
-
             "type": "clickButton",
             "target": "Back",
             "timeoutMs": 4000,
@@ -86,7 +85,6 @@
           }
         ]
       },
-
       {
         "windowTitle": "POS-58-Series Printer Driver installation",
         "requireControlText": "Install",
@@ -100,7 +98,6 @@
           }
         ]
       },
-
       {
         "windowTitle": "POS-58-Series Printer Driver installation",
         "requireControlText": "Finish",
@@ -115,7 +112,6 @@
         ],
         "stopAfter": true
       },
-
       {
         "windowTitle": "POS-58-Series Printer Driver installation",
         "actions": [
@@ -128,9 +124,10 @@
         ]
       }
     ],
-
     "setAsDefault": false,
-    "notes": "installMethod ТАЛБАРААР суулгах аргыг сольж болно: \"inf\" гэвэл infPath дэх .inf-ийг pnputil-ээр (гуравдагч талын exe-г ОГТ АЖИЛЛУУЛАХГҮЙ, гар хүрэлтгүй) суулгана; \"exe\" гэвэл driverInstallerPath дэх суулгагчийг (autoDriveWizard=true бол WizardAutomationService-ээр wizardSteps-ийн дагуу автоматаар удирдана) ажиллуулна. Хоёр аргын тохиргоо аль аль нь энэ ганц бичлэгт хадгалагдсан тул зөвхөн installMethod утгыг өөрчилснөөр л апп аль аргыг ашиглахаа шийднэ, бичлэг хуулбарлах/дараалал солих шаардлагагүй. INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр бүх файл одоо багц дотор бэлэн байгаа тул exe-ээр ажиллуулахад гар хүрэлтгүйгээр шууд INF аргаар суулгана."
+    "notes": "installMethod ТАЛБАРААР суулгах аргыг сольж болно: \"inf\" гэвэл infPath дэх .inf-ийг pnputil-ээр (гуравдагч талын exe-г ОГТ АЖИЛЛУУЛАХГҮЙ, гар хүрэлтгүй) суулгана; \"exe\" гэвэл driverInstallerPath дэх суулгагчийг (autoDriveWizard=true бол WizardAutomationService-ээр wizardSteps-ийн дагуу автоматаар удирдана) ажиллуулна. Хоёр аргын тохиргоо аль аль нь энэ ганц бичлэгт хадгалагдсан тул зөвхөн installMethod утгыг өөрчилснөөр л апп аль аргыг ашиглахаа шийднэ, бичлэг хуулбарлах/дараалал солих шаардлагагүй. INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр бүх файл одоо багц дотор бэлэн байгаа тул exe-ээр ажиллуулахад гар хүрэлтгүйгээр шууд INF аргаар суулгана.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/XPrinter.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "0483",
@@ -142,7 +139,9 @@
     "installMethod": "inf",
     "infPath": "SPRT\\SPRT_POS58\\pos58en.inf",
     "setAsDefault": false,
-    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой."
+    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/SPRT.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "1FC9",
@@ -154,7 +153,9 @@
     "installMethod": "inf",
     "infPath": "XPrinter\\PLUS-A1\\posprtv6.inf",
     "setAsDefault": false,
-    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно."
+    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/XPrinter.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "0483",
@@ -166,7 +167,9 @@
     "installMethod": "inf",
     "infPath": "SPRT\\SPRT-POS80\\pos88en.inf",
     "setAsDefault": false,
-    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой."
+    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/SPRT.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "0525",
@@ -178,7 +181,9 @@
     "installMethod": "inf",
     "infPath": "Sewoo\\Sewoo-400\\SLK-Txxx.inf",
     "setAsDefault": true,
-    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой."
+    "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/Sewoo.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "1FC9",
@@ -197,7 +202,9 @@
     "labelWidthMm": 40,
     "labelHeightMm": 30,
     "labelGapMm": 2,
-    "notes": "Seagull DriverWizard.exe CLI, {DETECTED_PORT}-г WMI-ээр динамикаар олдог"
+    "notes": "Seagull DriverWizard.exe CLI, {DETECTED_PORT}-г WMI-ээр динамикаар олдог",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/PLUS-L35.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "0525",
@@ -213,7 +220,9 @@
     "labelWidthMm": 40,
     "labelHeightMm": 30,
     "labelGapMm": 2,
-    "notes": "pnputil-ээр INF аргаар суулгасан"
+    "notes": "pnputil-ээр INF аргаар суулгасан",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/Sewoo.zip",
+    "driverPackageType": "zip"
   },
   {
     "vid": "0000",
@@ -225,6 +234,8 @@
     "installArguments": "/S",
     "supportsSilentInstall": true,
     "setAsDefault": false,
-    "notes": "VID/PID болон driver.exe-г та өөрөө оруулна."
+    "notes": "VID/PID болон driver.exe-г та өөрөө оруулна.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/Godex.zip",
+    "driverPackageType": "zip"
   }
 ]
