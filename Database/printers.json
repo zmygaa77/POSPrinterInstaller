@@ -204,7 +204,14 @@
     "labelGapMm": 2,
     "notes": "Seagull DriverWizard.exe CLI, {DETECTED_PORT}-г WMI-ээр динамикаар олдог",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/PLUS-L35.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "labelSoftwareName": "BarTender",
+    "labelSoftwareInstallerPath": "BarTender\\bartender.exe",
+    "labelSoftwareDownloadUrl": "https://github.com/zmygaa77/POSPrinterInstaller/releases/download/software-v1/BarTender.zip",
+    "labelSoftwarePackageType": "zip",
+    "labelSoftwareInstallArguments": "/S",
+    "labelSoftwareSupportsSilentInstall": true,
+    "tutorialVideoUrl": "https://youtu.be/QEfAcuMUhG0"
   },
   {
     "vid": "0525",
@@ -222,7 +229,14 @@
     "labelGapMm": 2,
     "notes": "pnputil-ээр INF аргаар суулгасан",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/Sewoo.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "labelSoftwareName": "LabelCooker",
+    "labelSoftwareInstallerPath": "LabelCooker\\labelcooker.exe",
+    "labelSoftwareDownloadUrl": "https://github.com/zmygaa77/POSPrinterInstaller/releases/download/software-v1/LabelCooker.zip",
+    "labelSoftwarePackageType": "zip",
+    "labelSoftwareInstallArguments": "/S",
+    "labelSoftwareSupportsSilentInstall": true,
+    "tutorialVideoUrl": "https://youtu.be/g4S9F1GTLVE"
   },
   {
     "vid": "0000",
@@ -236,6 +250,14 @@
     "setAsDefault": false,
     "notes": "VID/PID болон driver.exe-г та өөрөө оруулна.",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/Godex.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "printerType": "label",
+    "labelSoftwareName": "GoLabel",
+    "labelSoftwareInstallerPath": "GoLabel\\setup.exe",
+    "labelSoftwareDownloadUrl": "https://github.com/zmygaa77/POSPrinterInstaller/releases/download/software-v1/GoLabel.zip",
+    "labelSoftwarePackageType": "zip",
+    "labelSoftwareInstallArguments": "/S",
+    "labelSoftwareSupportsSilentInstall": true,
+    "tutorialVideoUrl": "https://youtu.be/velUo8FfFek"
   }
 ]
