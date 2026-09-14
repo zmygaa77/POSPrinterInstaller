@@ -209,9 +209,73 @@
     "labelSoftwareInstallerPath": "BarTender\\bartender.exe",
     "labelSoftwareDownloadUrl": "https://github.com/zmygaa77/POSPrinterInstaller/releases/download/software-v1/BarTender.zip",
     "labelSoftwarePackageType": "zip",
-    "labelSoftwareInstallArguments": "/S",
-    "labelSoftwareSupportsSilentInstall": true,
-    "tutorialVideoUrl": "https://youtu.be/QEfAcuMUhG0"
+    "labelSoftwareSupportsSilentInstall": false,
+    "tutorialVideoUrl": "https://youtu.be/QEfAcuMUhG0",
+    "wizardWindowTitle": "BarTender Setup",
+    "wizardSteps": [
+      {
+        "windowTitle": "BarTender Setup",
+        "requireControlText": "Welcome to the BarTender Setup Wizard",
+        "requireControlType": "Text",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Next"
+          }
+        ]
+      },
+      {
+        "windowTitle": "BarTender Setup",
+        "requireControlText": "I accept the terms in the license agreement",
+        "requireControlType": "CheckBox",
+        "actions": [
+          {
+            "type": "checkCheckbox",
+            "target": "I accept the terms in the license agreement"
+          },
+          {
+            "type": "clickButton",
+            "target": "Next"
+          }
+        ]
+      },
+      {
+        "windowTitle": "BarTender Setup",
+        "requireControlText": "Installation Options",
+        "requireControlType": "Text",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Next"
+          }
+        ]
+      },
+      {
+        "windowTitle": "BarTender Setup",
+        "requireControlText": "Ready to Install",
+        "requireControlType": "Text",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Install"
+          }
+        ],
+        "stopAfter": true
+      },
+      {
+        "windowTitle": "BarTender Setup",
+        "requireControlText": "Installation Complete",
+        "requireControlType": "Text",
+        "actions": [
+          {
+            "type": "clickButton",
+            "target": "Finish"
+          }
+        ],
+        "stopAfter": true
+      }
+    ],
+    "labelSoftwareInstallArguments": ""
   },
   {
     "vid": "0525",
