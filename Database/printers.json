@@ -214,6 +214,19 @@
     "wizardWindowTitle": "BarTender Setup",
     "wizardSteps": [
       {
+        "windowTitle": "InstallShield Wizard",
+        "actions": [
+          {
+            "type": "setCombo",
+            "value": "English (United States)"
+          },
+          {
+            "type": "clickButton",
+            "target": "OK"
+          }
+        ]
+      },
+      {
         "windowTitle": "BarTender Setup",
         "requireControlText": "Welcome to the BarTender Setup Wizard",
         "requireControlType": "Text",
