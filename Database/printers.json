@@ -160,6 +160,21 @@
     "productNameContains": "Printer POS-80"
   },
   {
+    "vid": "1FC9",
+    "pid": "2016",
+    "manufacturer": "XPrinter",
+    "modelName": "XP-80 (Printer POS-80)",
+    "windowsPrinterName": "PLUS-80",
+    "driverModelName": "POSPrinter POS-80",
+    "installMethod": "inf",
+    "infPath": "XPrinter\\PLUS-A1\\posprtv6.inf",
+    "setAsDefault": true,
+    "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно.",
+    "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/XPrinter.zip",
+    "driverPackageType": "zip",
+    "productNameContains": "Printer POS-80"
+  },
+  {
     "vid": "0483",
     "pid": "5720",
     "manufacturer": "SPRT",
@@ -179,14 +194,15 @@
     "pid": "A700",
     "manufacturer": "Sewoo",
     "modelName": "Sewoo",
-    "windowsPrinterName": "Generic POS Printer",
+    "windowsPrinterName": "Sewoo-400",
     "driverModelName": "THERMAL Receipt Printer",
     "installMethod": "inf",
     "infPath": "Sewoo\\Sewoo-400\\SLK-Txxx.inf",
     "setAsDefault": true,
     "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой.",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/Sewoo.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "productNameContains": "Generic POS Printer"
   },
   {
     "vid": "1FC9",
