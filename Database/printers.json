@@ -134,7 +134,7 @@
     "pid": "5720",
     "manufacturer": "SPRT",
     "modelName": "SPRT-POS58",
-    "windowsPrinterName": "Spirit SPRT Printer",
+    "windowsPrinterName": "SPRT - 58",
     "driverModelName": "58mm Series Printer",
     "installMethod": "inf",
     "infPath": "SPRT\\SPRT_POS58\\pos58en.inf",
@@ -164,14 +164,15 @@
     "pid": "5720",
     "manufacturer": "SPRT",
     "modelName": "SPRT-POS80",
-    "windowsPrinterName": "Spirit SPRT Printer",
+    "windowsPrinterName": "SPRT-POS80",
     "driverModelName": "80mm Series Printer",
     "installMethod": "inf",
     "infPath": "SPRT\\SPRT-POS80\\pos88en.inf",
     "setAsDefault": true,
     "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой.",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/SPRT.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "productNameContains": "80mm Series"
   },
   {
     "vid": "0525",
