@@ -362,10 +362,10 @@
     "productNameContains": "LK-B20II"
   },
   {
-    "vid": "0000",
-    "pid": "0000",
-    "manufacturer": "Godex",
-    "modelName": "Godex Printer",
+    "vid": "195F",
+    "pid": "0001",
+    "manufacturer": "Godex DT2",
+    "modelName": "Godex DT2",
     "windowsPrinterName": "Godex Printer",
     "driverInstallerPath": "Godex\\driver.exe",
     "installArguments": "/S",
@@ -381,6 +381,7 @@
     "labelSoftwarePackageType": "zip",
     "labelSoftwareInstallArguments": "/S",
     "labelSoftwareSupportsSilentInstall": true,
-    "tutorialVideoUrl": "https://youtu.be/velUo8FfFek"
+    "tutorialVideoUrl": "https://youtu.be/velUo8FfFek",
+    "windowsAutoInstalls": true
   }
 ]
