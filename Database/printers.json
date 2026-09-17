@@ -332,7 +332,8 @@
     "labelSoftwarePackageType": "zip",
     "labelSoftwareInstallArguments": "/S",
     "labelSoftwareSupportsSilentInstall": true,
-    "tutorialVideoUrl": "https://youtu.be/g4S9F1GTLVE"
+    "tutorialVideoUrl": "https://youtu.be/g4S9F1GTLVE",
+    "productNameContains": "SEWOO TECH LK-B30II"
   },
   {
     "vid": "0000",
