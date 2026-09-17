@@ -141,7 +141,8 @@
     "setAsDefault": true,
     "notes": "INF аргаар суулгана. Drivers/SPRT_POS58/ дотор pos58en.inf, POS58EN.gpd, Drv2152s.cat 3 файл л хэрэгтэй (дэд фолдэргүй). Энэ INF-д USB VID/PID холбоос заагаагүй тул PnP автоматаар танихгүй — апп-ийн гар аргаар нэмэх (printui.dll) алхам ажиллана. driverModelName нь POS58EN.gpd-ийн *ModelName-тэй яг таарах ёстой.",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/SPRT.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "productNameContains": "Spirit SPRT Printer"
   },
   {
     "vid": "1FC9",
