@@ -156,7 +156,8 @@
     "setAsDefault": true,
     "notes": "INF аргаар суулгана (drvinst.exe GUI wizard-ыг ОГТ АЖИЛЛУУЛАХГҮЙ). posprtv6.inf доторх [SourceDisksFiles] хэсэгт зааснаар Drivers/XPrinter/ дотор доорх файлууд ЗААВАЛ байх ёстой: posprtdrv6.cat (posprtv6.inf-тэй ижил фолдерт), Drivers/XPrinter/amd64/posprtdrv6.dll, Drivers/XPrinter/amd64/posprtdrv6ui.dll, Drivers/XPrinter/dat/posprtdrv6.dat. Эдгээр 3 файл (dll x2, dat x1) одоогоор дутуу байна — эдгээрийг drvinst.exe-г 7-Zip-ээр задалснаас, эсвэл өмнө нь wizard-аар нэг удаа суулгасан бол C:\\Windows\\System32\\DriverStore\\FileRepository\\posprtv6.inf_xxxxxxxx\\ фолдероос олж болно.",
     "driverDownloadUrl": "https://raw.githubusercontent.com/zmygaa77/POSPrinterInstaller/master/Drivers/XPrinter.zip",
-    "driverPackageType": "zip"
+    "driverPackageType": "zip",
+    "productNameContains": "Printer POS-80"
   },
   {
     "vid": "0483",
